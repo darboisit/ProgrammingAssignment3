@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "best <- function(state = NA, outcome = NA) {\n    \n    ## Named vector to hold validations and index for argument outcome\n    outcomes <- c(\"heart attack\"=11, \"heart failure\"=17, \"pneumonia\"=23)\n    \n    ## Validate argument outcome\n    if (!outcome %in% names(outcomes)){\n        stop(\"invalid outcome\")\n    } \n    \n    ## Read csv data\n    outcomeFile <- read.csv(\"outcome-of-care-measures.csv\", stringsAsFactors=FALSE)\n    \n    # Validate argument state\n    if (!state %in% outcomeFile[,7]){\n        stop(\"invalid state\")\n    } \n    \n    # Read only the needed columns\n    outcomeResult <- outcomeFile[,c(2, 7, outcomes[outcome])]\n\n    # Rename the resulting file columns\n    names(outcomeResult) <- c(\"Hospital\", \"State\", \"Outcome\")\n    \n    # Selecting only the required state and valid rows\n    outcomeResult <- subset(outcomeResult, State == state & Outcome != \"Not Available\")\n    \n    # Change the outcome to numeric\n    outcomeResult$Outcome <- as.numeric(outcomeResult$Outcome)\n    \n    # Sort to find the best hospital\n    outcomeResult <- outcomeResult[order(outcomeResult$Outcome, outcomeResult$Hospital),]\n\n    # Return hospital name in that state with lowest 30-day death\n    outcomeResult[1,1]\n\n\n    ## rate\n}\n\n# named vector with something like \n# outcomes <- c(“heart attack”=11, “heart failure”=17, “pneumonia”=23) \n# then you can use that to both test the function argument and select the column. \n# Something like df[, c(2,7,outcomes[outcome])]. \n# Also, when you validate the outcome argument instead of using %in% outcomes you’d use %in% names(outcomes).",
+    "contents" : "best <- function(state = NA, outcome = NA) {\n    # Named vector to hold validations and index for argument outcome\n    outcomes <- c(\"heart attack\"=11, \"heart failure\"=17, \"pneumonia\"=23)\n    \n    # Validate argument outcome\n    if (!outcome %in% names(outcomes)){\n        stop(\"invalid outcome\")\n    } \n    \n    # Read csv data\n    outcomeFile <- read.csv(\"outcome-of-care-measures.csv\", stringsAsFactors=FALSE)\n    \n    # Validate argument state\n    if (!state %in% outcomeFile[,7]){\n        stop(\"invalid state\")\n    } \n    \n    # Read only the needed columns\n    outcomeResult <- outcomeFile[,c(2, 7, outcomes[outcome])]\n\n    # Rename the resulting file columns\n    names(outcomeResult) <- c(\"Hospital\", \"State\", \"Outcome\")\n    \n    # Selecting only the required state and valid rows\n    outcomeResult <- subset(outcomeResult, State == state & Outcome != \"Not Available\")\n    \n    # Change the outcome to numeric\n    outcomeResult$Outcome <- as.numeric(outcomeResult$Outcome)\n    \n    # Sort to find the best hospital\n    outcomeResult <- outcomeResult[order(outcomeResult$Outcome, outcomeResult$Hospital),]\n\n    # Return hospital name in that state with lowest 30-day death\n    outcomeResult[1,1]\n}\n",
     "created" : 1492588432396.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1285726505",
+    "hash" : "1543906175",
     "id" : "BF48D5C5",
-    "lastKnownWriteTime" : 1492598373,
-    "last_content_update" : 1492598373584,
+    "lastKnownWriteTime" : 1492611159,
+    "last_content_update" : 1492611159143,
     "path" : "~/Coursera-DataScience/ProgrammingAssignment3/best.R",
     "project_path" : "best.R",
     "properties" : {

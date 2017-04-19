@@ -1,21 +1,21 @@
 {
     "collab_server" : "",
-    "contents" : "rankhospital <- function(state, outcome, num = \"best\") {\n    ## Read outcome data\n    ## Check that state and outcome are valid\n    ## Return hospital name in that state with the given rank\n    ## 30-day death rate\n}",
+    "contents" : "rankall <- function(outcome, num = \"best\") {\n    # Named vector to hold validations and index for argument outcome\n    outcomes <- c(\"heart attack\"=11, \"heart failure\"=17, \"pneumonia\"=23)\n    \n    # Validate argument outcome\n    if (!outcome %in% names(outcomes)){\n        stop(\"invalid outcome\")\n    } \n    \n    # Validate argument num\n    if (num != \"best\" & num != \"worst\" & !is.numeric(num)){\n        stop(\"invalid rank argument\")\n    }\n    \n    # Read csv data\n    outcomeFile <- read.csv(\"outcome-of-care-measures.csv\", stringsAsFactors=FALSE)\n    \n    # Read only the needed columns\n    outcomeResult <- outcomeFile[,c(2, 7, outcomes[outcome])]\n    \n    # Rename the resulting file columns\n    names(outcomeResult) <- c(\"Hospital\", \"State\", \"Outcome\")\n    \n    # Selecting only the required state and valid rows\n    outcomeResult <- subset(outcomeResult, Outcome != \"Not Available\")\n    \n    # Change the outcome to numeric\n    outcomeResult$Outcome <- as.numeric(outcomeResult$Outcome)\n    \n    # Get a list of all the states\n    states <- sort(unique(outcomeResult$State))\n    \n    # Initialize final result\n    hospitals <- data.frame(Hospital=character(), State=character(), stringsAsFactors=FALSE)\n    \n    # Loop throught the states to get the requested rank\n    for(state in states){\n        # Get only one state at a time\n        tempResult <- subset(outcomeResult, State == state)\n        \n        # Sort the hospitals in the state\n        tempResult <- tempResult[order(tempResult$Outcome, tempResult$Hospital),]\n        \n        # Rank the hospitals in the state\n        if (num == \"best\") {\n            index <- 1\n        } else if (num == \"worst\") {\n            index <- nrow(tempResult)\n        } else {\n            index <- num}\n        \n        hospitals <- rbind(hospitals, data.frame(\"Hospital\"=tempResult[index,1], \"State\"=state))\n    }\n    \n    hospitals\n}",
     "created" : 1492609807442.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2711796549",
+    "hash" : "2285358596",
     "id" : "36B5DC94",
-    "lastKnownWriteTime" : 1492609826,
-    "last_content_update" : 1492609826132,
-    "path" : "~/Coursera-DataScience/ProgrammingAssignment3/rankhospital.R",
-    "project_path" : "rankhospital.R",
+    "lastKnownWriteTime" : 1492615543,
+    "last_content_update" : 1492615543550,
+    "path" : "~/Coursera-DataScience/ProgrammingAssignment3/rankall.R",
+    "project_path" : "rankall.R",
     "properties" : {
         "tempName" : "Untitled1"
     },
     "relative_order" : 2,
-    "source_on_save" : false,
+    "source_on_save" : true,
     "source_window" : "",
     "type" : "r_source"
 }

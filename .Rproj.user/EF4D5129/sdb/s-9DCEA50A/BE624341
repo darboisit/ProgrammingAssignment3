@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1492614874225.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BE624341",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1492614874225,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "C288C2C1",
+        "caption" : "hospitals",
+        "contentUrl" : "grid_resource/gridviewer.html?env=_rs_no_env&obj=hospitals&cache_key=C288C2C1",
+        "displayedObservations" : 1,
+        "environment" : "_rs_no_env",
+        "object" : "hospitals",
+        "preview" : 0,
+        "totalObservations" : 1,
+        "variables" : 2
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

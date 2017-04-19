@@ -1,14 +1,13 @@
 best <- function(state = NA, outcome = NA) {
-    
-    ## Named vector to hold validations and index for argument outcome
+    # Named vector to hold validations and index for argument outcome
     outcomes <- c("heart attack"=11, "heart failure"=17, "pneumonia"=23)
     
-    ## Validate argument outcome
+    # Validate argument outcome
     if (!outcome %in% names(outcomes)){
         stop("invalid outcome")
     } 
     
-    ## Read csv data
+    # Read csv data
     outcomeFile <- read.csv("outcome-of-care-measures.csv", stringsAsFactors=FALSE)
     
     # Validate argument state
@@ -33,13 +32,4 @@ best <- function(state = NA, outcome = NA) {
 
     # Return hospital name in that state with lowest 30-day death
     outcomeResult[1,1]
-
-
-    ## rate
 }
-
-# named vector with something like 
-# outcomes <- c(“heart attack”=11, “heart failure”=17, “pneumonia”=23) 
-# then you can use that to both test the function argument and select the column. 
-# Something like df[, c(2,7,outcomes[outcome])]. 
-# Also, when you validate the outcome argument instead of using %in% outcomes you’d use %in% names(outcomes).
