@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "rankhospital <- function(state, outcome, num = \"best\") {\n    ## Read outcome data\n    ## Check that state and outcome are valid\n    ## Return hospital name in that state with the given rank\n    ## 30-day death rate\n}",
+    "created" : 1492609807442.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2711796549",
+    "id" : "36B5DC94",
+    "lastKnownWriteTime" : 1492609826,
+    "last_content_update" : 1492609826132,
+    "path" : "~/Coursera-DataScience/ProgrammingAssignment3/rankhospital.R",
+    "project_path" : "rankhospital.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

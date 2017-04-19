@@ -1,0 +1,251 @@
+bye()
+swirl()
+bye()
+swirl()
+bye()
+swirl()
+head(flags)
+dim(flags)
+viewinfo()
+class(flags)
+cls_list <- lapply(flags, class)
+cls_list
+class(cls_list)
+as.character(cls_list)
+length(cls_list)
+cls_vect <- sapply(flags, class)
+class(cls_list)
+class(cls_vect)
+sum(flags$orange)
+flag_colors <- flags[,11:17]
+head(flag_colors)
+lapply(flag_colors, sum)
+sapply(flag_colors, sum)
+sapply(flag_colors, mean)
+Q
+swirl()
+sapply(flag_colors, mean)
+q
+Q
+bye()
+library(swirl)
+swirl()
+sapply(flag_colors, mean)
+flag_shapes < flags[1,19:23]
+flag_shapes < flags[,19:23]
+flag_shapes <- flags[,19:23]
+lapply(flag_shapes, range)
+shape_mat <- sapply(flag_shapes, range)
+shape_mat
+class(shape_mat)
+unique(c(3, 4, 5, 5, 5, 6, 6))
+unique_vals <- lapply(flags, unique)
+unique_vals
+unique_vals <- sapply(flags, unique)
+sapply(unique_vals, length)
+sapply(flags, unique)
+lapply(unique_vals, function(elem) elem[2])
+sapply(flags, unique)
+vapply(flags, unique, numeric(1))
+ok()
+sapply(flags, class)
+vapply(flags, class, character(1))
+?tapply
+table(flags$landnass)
+table(flags$landmass)
+table(flags$animate)
+tapply(flags$animate, flags$landmass, mean)
+tapply(flags$population, flags$red, summary)
+tapply(flags$population, flags$landmass, summary)
+library(datasets)#
+data(iris)
+data(iris)
+iris
+head(iris)
+lapply(iris, mean)
+colMeans(iris)
+rowMeans(iris[,1:4])
+?apply
+apply(iris, 2, mean)
+apply(iris[,1:4], 2, mean)
+library(datasets)
+data(mtcars)
+mtcars
+colNames(mtcars)
+tapply(mtcars$mpg, mtcars$cyl, mean)
+with(mtcars, tapply(mpg, cyl, mean))
+apply(mtcars, 2, mean)
+sapply(mtcars, cyl, mean)
+sapply(split(mtcars$mpg, mtcars$cyl), mean)
+mean(mtcars$mpg, mtcars$cyl)
+?abs
+abs(26.66364 - 15.10000 )
+debug(ls)
+ls
+ls()
+iris
+tapply(iris$Sepal.Lenght, iris$Species, mean)
+temp_file <- iris["Species" == "virginica", 1]
+temp_file
+temp_file <- iris["Species" = "virginica", 1]
+temp <- iris[iris$Species == "virginica", 1]
+tmep
+temp
+mean(temp)
+with(mtcars, tapply(mpg, cyl, mean))
+tapply(mtcars$mpg, mtcars$cyl, mean)
+sapply(split(mtcars$mpg, mtcars$cyl), mean)
+mtcars
+tapply(mtcars$hp, mtcars$cyl, mean)
+mat1 <- matrix(c(1,2,3,4,5,6,7,8,9),3,3)
+mat1
+solve(mat1)
+mat1 <- rbind(mat1, c(10,11,12))
+mat1
+solve(mat1)
+t(mat1)
+mat1 <- matrix(c(1,2,3,4,5,6,7,8,9),3,3)
+mat1
+sove(mat1)
+solve(mat1)
+mat1 <- matrix(c(1,2,1,2,1,2,1,2,1),3,3)
+mat1
+solve(mat1)
+mat1 <- matrix(c(4,8,1,3),2,2)
+mat1
+solve(mat1)
+function_test <- function(x){x <- x + 1}
+function_test <- function(x){x <- x + 1 print(x)}
+function_test <- function(x){x <- x + 1 message(x)}
+tst1 < c(1, 2, 3, 4, 5)
+tst1 <- c(1, 2, 3, 4, 5)
+class(tst1)
+length(tst1)
+system.time(readlines"http://www.argus.bm")
+system.time(readlines"http://www.argus.bm"))
+system.time(readlines()"http://www.argus.bm"))
+system.time(readlines("http://www.argus.bm"))
+system.time(readLines("http://www.argus.bm"))
+set.seed(1)
+rpois(5, 2)
+set.seed(1)
+rpois(5, 2)
+library(swirl)
+swirl
+swirl()
+2
+0
+bye
+by()
+5 + 7
+x < 5 + 7
+x <- 5 + 7
+x
+y x - 3
+y <- x - 3
+y
+c(1.1, 9, 3.14)
+z <- c(1.1, 9, 3.14)
+?c
+z
+z <- c(z, 555, z)
+c(z, 555, z)
+z * 2 + 100
+my_sqrt <- (z - 1)^2
+my_sqrt <- sqrt(z - 1)
+my_sqrt
+my_div <- z / my_sqrt
+my_div
+c(1, 2, 3, 4) + c(0, 10)
+c(1, 2, 3, 4) + c(0, 10, 100)
+c(1, 2, 3, 4) + c(0, 10, 1000)
+(z * 2 + 1000)
+info()
+z * 2 + 1000
+my_div
+ls()
+class(plants)
+dim(plants)
+nrows(plants)
+nrow(plants)
+ncol(plants)
+object.size(plants)
+names(plants)
+head(plants)
+head(plants, 10)
+tail(plants)
+tail(plants, 15)
+summary(plants)
+table(plants$Active_Growth_Period)
+str(plants)
+?sample
+sample(1:6, 4, replace = TRUE)
+sample(1:20, 10)
+sample(1:20, 30)
+LETTERS
+sample(LETTERS)
+flips <- sample(c(0,1),100,prob=c(0.3,0.7))
+flips <- sample(c(0,1), 100, prob = c(0.3, 0.7))
+flips <- sample(c(0,1), 100, prob = c(0.3, 0.7), replacement = TRUE)
+flips <- sample(c(0,1), 100, prob = c(0.3, 0.7), replace = TRUE)
+flips
+sum(flips)
+?rbonim
+?rbinom
+rbinom(1, size = 100, prob = 0.7)
+flips2 <- rbinom(100, size = 100, prob = 0.7)
+flips2 <- rbinom(100, size = 1, prob = 0.7)
+flips2
+sum(flips2)
+?rnorm
+rnorm(10)
+rnorm(10,100,25)
+rpois(5, 10)
+my_pois <- replicate(100, rpois(5, 10))
+my_pois
+cm <- colMeans(my_pois)
+hist(cm)
+data(cars)
+help(cars)
+head(cars)
+dim(cars)
+names(cars)
+summary(cars)
+plot(cars)
+?plot
+plot(x = cars$speed, y = cars$dist)
+plot(x = cars$dist, y = cars$speed)
+plot("Speed" = cars$speed, y = cars$dist)
+plot(x = cars$speed, y = cars$dist, "Speed")
+plot(x = cars$speed, y = cars$dist, xlab="Speed")
+plot(x = cars$speed, y = cars$dist, xlab="Speed", ylab="Stopping Distance")
+plot(x = cars$speed, y = cars$dist, ylab = "Stopping Distance")
+plot(x = cars$speed, y = cars$dist, xlab="Speed", ylab="Stopping Distance")
+plot(cars, main="My Plot")
+plot(cars, main="My Plot", subtitle="My Plot Subtitle")
+plot(cars, main="My Plot", sub="My Plot Subtitle")
+plot(cars, sub="My Plot Subtitle")
+plot(cars, col=2)
+plot(cars, xlim=(c(10, 15)))
+plot(cars, xlim = c(10, 15))
+plot(cars, pch=2)
+data(mtcars)
+?boxplot
+boxplot(formula = mpg ~ cyl, data=mtcars)
+hist(mtcars$mpg)
+byt()
+bye()
+file.list()
+list.files()
+setwd("Coursera-DataScience/")
+list.files()
+setwd("ProgAssignment3-data"  )
+list.files()
+outcome <-read.csv("outcome-of-care-measures.csv", colClasses = "character")
+head(outcome)
+head(outcome)
+ncol(outcome)
+names(outcome)
+outcome[,11] <- as.numeric(outcome[,11])
+hist(outcome[,11])
+hist(outcome[,11])
